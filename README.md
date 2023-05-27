@@ -4,7 +4,7 @@
 
 ### Links
 
-- Live Site URL: [click here](https://antonistarzynski.github.io/Advice-generator-app/)
+- Live Site URL: [click here](https://antonistarzynski.github.io/Password-Generator/)
 
 ### Built with
 
