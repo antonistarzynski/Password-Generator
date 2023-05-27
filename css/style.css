@@ -1,0 +1,224 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'JetBrains Mono', monospace; }
+
+body {
+  background-color: #18171F;
+  font-family: 1em;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; }
+
+.none {
+  display: none; }
+
+.container {
+  width: 343px;
+  height: 33.75em; }
+  .container header {
+    color: #817D92;
+    text-align: center;
+    margin-bottom: 1em; }
+  .container main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .container main .password {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 95%;
+      background-color: #24232C;
+      height: 4em;
+      padding: 1em; }
+      .container main .password .password-output {
+        font-size: 1.5em;
+        color: #E6E5EA; }
+      .container main .password .gray {
+        color: #E6E5EA;
+        opacity: 25%; }
+      .container main .password .icon-copy {
+        width: 5.5em;
+        height: 100%;
+        cursor: pointer;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        fill: #A4FFAF; }
+        .container main .password .icon-copy .copied {
+          color: #A4FFAF;
+          margin-right: .5em; }
+      .container main .password .icon-copy:active {
+        fill: #E6E5EA; }
+    .container main .bottom {
+      margin-top: 1em;
+      padding: 1em;
+      width: 95%;
+      background-color: #24232C; }
+      .container main .bottom .length {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center; }
+        .container main .bottom .length .character-length-top {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          align-items: center; }
+          .container main .bottom .length .character-length-top .length-amount {
+            font-size: 1.5em;
+            color: #A4FFAF; }
+        .container main .bottom .length .character-length-bottom {
+          width: 100%; }
+          .container main .bottom .length .character-length-bottom span {
+            display: flex;
+            justify-content: center; }
+            .container main .bottom .length .character-length-bottom span input {
+              margin: 1em 0;
+              width: 100%;
+              background-color: blue; }
+            .container main .bottom .length .character-length-bottom span .slider {
+              -webkit-appearance: none;
+              appearance: none;
+              height: .5em;
+              background-color: #18171F;
+              margin-bottom: 2em; }
+            .container main .bottom .length .character-length-bottom span .slider::-webkit-slider-thumb {
+              -webkit-appearance: none;
+              appearance: none;
+              width: 1.75em;
+              height: 1.75em;
+              background: #E6E5EA;
+              cursor: pointer; }
+            .container main .bottom .length .character-length-bottom span .slider::-moz-range-thumb {
+              width: 1.75em;
+              height: 1.75em;
+              background: #E6E5EA;
+              cursor: pointer;
+              border-radius: 100%;
+              border: none; }
+            .container main .bottom .length .character-length-bottom span .slider::-moz-range-thumb:active {
+              background: #18171F;
+              border: 2px solid #A4FFAF;
+              cursor: pointer; }
+            .container main .bottom .length .character-length-bottom span .slider::-moz-range-progress {
+              background: #A4FFAF; }
+      .container main .bottom .include-section {
+        display: grid;
+        grid-template-columns: 1.5em auto;
+        gap: 1em;
+        margin-bottom: 2em; }
+        .container main .bottom .include-section input {
+          -webkit-appearance: none;
+          appearance: none;
+          background-color: none;
+          margin: 0;
+          border: 2px solid #E6E5EA;
+          width: 1.25em;
+          height: 1.25em; }
+        .container main .bottom .include-section input:checked {
+          background-color: #A4FFAF;
+          border: none;
+          border: 2px solid #A4FFAF;
+          background-image: url(../assets/assets/images/icon-check.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+          color: #E6E5EA; }
+      .container main .bottom .strength {
+        background-color: #18171F;
+        height: 3.5em;
+        padding: .75em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1em; }
+        .container main .bottom .strength .strength-text {
+          text-transform: uppercase;
+          color: #817D92; }
+        .container main .bottom .strength .strength-rate {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center; }
+          .container main .bottom .strength .strength-rate .strength-rate-text {
+            text-transform: uppercase;
+            color: #E6E5EA;
+            font-size: 1.125em; }
+          .container main .bottom .strength .strength-rate .rate-boxes {
+            width: 4em;
+            display: flex;
+            justify-content: space-between;
+            margin-left: .75em; }
+            .container main .bottom .strength .strength-rate .rate-boxes .rate-box {
+              width: 0.625em;
+              height: 1.75em;
+              border: 2px solid #E6E5EA; }
+          .container main .bottom .strength .strength-rate .too-weak .rate-box:nth-child(1) {
+            background-color: #F64A4A;
+            border: #F64A4A; }
+          .container main .bottom .strength .strength-rate .weak .rate-box:nth-child(-n+2) {
+            background-color: #FB7C58;
+            border: #FB7C58; }
+          .container main .bottom .strength .strength-rate .medium .rate-box:nth-child(-n+3) {
+            background-color: #F8CD65;
+            border: #F8CD65; }
+          .container main .bottom .strength .strength-rate .strong .rate-box:nth-child(-n+4) {
+            background-color: #A4FFAF;
+            border: #A4FFAF; }
+      .container main .bottom .generate {
+        width: 100%;
+        height: 3.5em;
+        background-color: #A4FFAF;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer; }
+        .container main .bottom .generate .btn-text {
+          color: #18171F;
+          text-transform: uppercase; }
+        .container main .bottom .generate .arrow {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 1.5em;
+          height: 1.5em;
+          margin-left: .5em;
+          fill: #18171F; }
+      .container main .bottom .generate:active {
+        background: none;
+        border: 2px solid #A4FFAF; }
+        .container main .bottom .generate:active .btn-text {
+          color: #A4FFAF; }
+        .container main .bottom .generate:active .arrow {
+          fill: #A4FFAF; }
+
+@media (min-width: 768px) {
+  .container {
+    width: 33.75em;
+    height: 695px; }
+    .container header {
+      font-size: 1.5em;
+      margin-bottom: 2em; }
+    .container main .password {
+      height: 5em;
+      padding: 1.5em; }
+      .container main .password .password-output {
+        font-size: 2em; }
+    .container main .bottom {
+      margin-top: 1.5em;
+      padding: 1.5em; }
+      .container main .bottom .length .character-length-top .character-length {
+        font-size: 1.125em; }
+      .container main .bottom .length .character-length-top .length-amount {
+        font-size: 2em; }
+      .container main .bottom .include-section {
+        display: grid;
+        grid-template-columns: 1em auto;
+        gap: 1.25em;
+        margin-bottom: 2em; } }
+
+/*# sourceMappingURL=style.css.map */

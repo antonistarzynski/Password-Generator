@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Password generator app</title>
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <header>
+      Password Generator
+    </header>
+
+    <main>
+      <section class="password">
+        <span class="password-output gray">Generate!</span>
+        <span class="icon-copy">
+          <p class="copied none">COPIED</p>
+          <span class="copy-icon">
+            <svg width="21" height="24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20.341 3.091 17.909.659A2.25 2.25 0 0 0 16.319 0H8.25A2.25 2.25 0 0 0 6 2.25V4.5H2.25A2.25 2.25 0 0 0 0 6.75v15A2.25 2.25 0 0 0 2.25 24h10.5A2.25 2.25 0 0 0 15 21.75V19.5h3.75A2.25 2.25 0 0 0 21 17.25V4.682a2.25 2.25 0 0 0-.659-1.591ZM12.469 21.75H2.53a.281.281 0 0 1-.281-.281V7.03a.281.281 0 0 1 .281-.281H6v10.5a2.25 2.25 0 0 0 2.25 2.25h4.5v1.969a.282.282 0 0 1-.281.281Zm6-4.5H8.53a.281.281 0 0 1-.281-.281V2.53a.281.281 0 0 1 .281-.281H13.5v4.125c0 .621.504 1.125 1.125 1.125h4.125v9.469a.282.282 0 0 1-.281.281Zm.281-12h-3v-3h.451c.075 0 .147.03.2.082L18.667 4.6a.283.283 0 0 1 .082.199v.451Z" />
+            </svg>
+          </span>
+
+        </span>
+      </section>
+
+      <div class="bottom">
+
+        <section class="length">
+
+          <div class="character-length-top">
+            <span class="character-length"> Character Length</span>
+            <span class="length-amount">10</span>
+          </div>
+
+          <div class="character-length-bottom">
+            <span>
+              <input class="slider" type="range" id="character-length" name="character-length" min="4" max="12" step="1"
+                value="10">
+            </span>
+          </div>
+        </section>
+
+
+
+
+        <form class="include-section">
+
+          <input type="checkbox" name="uppercase-letters" id="uppercase-letters" value="uppercase">
+          <label for="uppercase-letters">
+            Include Uppercase Letters</label>
+
+          <input type="checkbox" name="lowercase-letters" id="lowercase-letters" value="lowercase">
+          <label for="lowercase-letters">
+            Include Lowercase Letters</label>
+
+          <input type="checkbox" name="numbers" id="numbers" value="numbers">
+          <label for="number">
+            Include Numbers</label>
+
+          <input type="checkbox" name="symbols" id="symbols" value="symbols">
+          <label for="symbols">
+            Include Symbols</label>
+
+        </form>
+
+        <section class="strength">
+
+          <section class="strength-text"> Strength</section>
+
+          <section class="strength-rate">
+            <span class="strength-rate-text"></span>
+            <span class="rate-boxes">
+              <span class="rate-box"></span>
+              <span class="rate-box"></span>
+              <span class="rate-box"></span>
+              <span class="rate-box"></span>
+            </span>
+          </section>
+
+        </section>
+
+        <button class="generate" type="submit">
+          <span class="btn-text">generate</span>
+          <span class="arrow"><svg width="12" height="12" xmlns="http://www.w3.org/2000/svg">
+              <path d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z" />
+            </svg></span>
+        </button>
+      </div>
+
+    </main>
+  </div>
+</body>
+
+</html>
